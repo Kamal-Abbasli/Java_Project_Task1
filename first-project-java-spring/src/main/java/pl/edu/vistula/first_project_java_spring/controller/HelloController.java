@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller // 1. Changed from @RestController
 public class HelloController {
 
-    @GetMapping(value = "/")
-    @ResponseBody // 2. Added this so it still returns just text
-    public String hello() {
-        return "Hello Vistula, in my first Spring controller.";
-    }
+//    @GetMapping(value = "/")
+//    @ResponseBody // 2. Added this so it still returns just text
+//    public String hello() {
+//        return "Hello Vistula, in my first Spring controller.";
+//    }
 
     @GetMapping("/greeting")
     public String greeting(@RequestParam(name = "name", required = false, defaultValue = "World") String name, Model model) {
